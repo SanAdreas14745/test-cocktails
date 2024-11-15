@@ -7,25 +7,38 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the
 source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use
-`ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `docs/` directory.
 
-## Running unit tests
+## Тестовое задание для Frontend разработчика (web)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Цель: разработать одностраничное приложение (SPA) с использованием Angular. В качестве UI-библиотеки использовать PrimeNg.
+Результат: итоговый проект в виде репозитория на GitHub, содержащего исходный код и README.md с инструкциями по развертыванию веб-приложения.
 
-## Running end-to-end tests
+## Описание приложения
+Приложение предназначено для поиска рецептов коктейлей и использует TheCocktailDB API в качестве источника данных.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that
-implements end-to-end testing capabilities.
+## Главный экран
+#### Поисковая панель
+В верхней части страницы расположен поисковый инпут для ввода названия коктейля и две кнопки: “Search” и “Random” (Вместо текста в кнопках нужно использовать иконки)
 
-## Further help
+#### Поиск коктейлей
+При нажатии на “Search” приложение выполняет поиск по введенному названию коктейля, отображая результаты в виде карточек.
+Каждая карточка содержит:
+- Название коктейля (поле strDrink)
+- Тип бокала (поле strGlass)
+- Небольшое изображение коктейля (поле strDrinkThumb)
+#### Просмотр деталей коктейля
+При нажатии на карточку открывается экран (новая страница) с подробной информацией о коктейле, включая:
+- Изображение коктейля среднего размера (strDrinkThumb)
+- Название коктейля (strDrink)
+- Тип бокала (strGlass)
+- Список ингредиентов (поля strIngredient с соответствующими номерами)
+- Инструкцию по приготовлению на английском языке (strInstructions)
+#### Случайный коктейль
+При нажатии на кнопку “Random” открывается модальное окно с описанием случайного коктейля, содержащее ту же информацию, что и в описании выше.
 
-To get more help on the Angular CLI use `ng help` or go check out
-the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+❗Приложение разрабатывается в первую очередь для desktop экранов, но должна быть реализована адаптивность на более мелких дисплеях.
+Желательна полная адаптивность на любой ширине экрана.
+Обязательна адаптивность для брейкпоинтов: 1920px, 1440px, 768px, 375px.
