@@ -1,0 +1,10 @@
+<header>
+  <p-toolbar [style]="{ 'place-content': 'center', 'gap': '24px' }">
+    <app-search-input
+      #searchInput
+      (keydown.enter)="onSearchBtnClick(searchInput.value())"
+      (searchBtnClick)="onSearchBtnClick(searchInput.value())"
+      [hasSearchBtn]="true"/>
+    <p-button (onClick)="onRandomSearchBtnClick()" icon="pi pi-sync" iconPos="right"/>
+  </p-toolbar>
+</header>

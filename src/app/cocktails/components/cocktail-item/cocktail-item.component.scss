@@ -1,0 +1,55 @@
+@use 'screen';
+
+:host {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+
+  ::ng-deep {
+    .cocktail-item {
+      &__ingredients-table {
+        .p-panel-content {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+.cocktail-item {
+  &__header {
+    text-align: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 24px;
+
+    &_center {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.header {
+  &__image {
+    max-width: 420px;
+    max-height: 420px;
+
+    @include screen.tablet {
+      max-width: 320px;
+      max-height: 320px;
+    }
+    @include screen.mobile {
+      max-width: 260px;
+      max-height: 260px;
+    }
+
+    position: relative !important;
+  }
+}

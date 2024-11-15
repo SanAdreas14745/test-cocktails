@@ -1,0 +1,24 @@
+@use 'variables';
+@use 'sass:map';
+
+$desktop: map.get(variables.$display-widths, l);
+$tablet: map.get(variables.$display-widths, m);
+$mobile: map.get(variables.$display-widths, s);
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}

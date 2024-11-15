@@ -1,0 +1,22 @@
+<p-table
+  [alwaysShowPaginator]="false"
+  [paginator]="hasPagination()"
+  [rows]="5"
+  [showFirstLastIcon]="false"
+  [value]="tableData()"
+  responsiveLayout="scroll">
+  <ng-template pTemplate="header">
+    <tr>
+      @for (columnName of displayedColumns(); track columnName) {
+        <th>{{ columnName }}</th>
+      }
+    </tr>
+  </ng-template>
+  <ng-template let-rowData pTemplate="body">
+    <tr [pSelectableRow]="rowData">
+      @for (cell of rowData; track cell) {
+        <td>{{ cell }}</td>
+      }
+    </tr>
+  </ng-template>
+</p-table>

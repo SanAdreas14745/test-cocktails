@@ -1,0 +1,10 @@
+<p-dialog
+  [(visible)]="visible"
+  [dismissableMask]="true"
+  [draggable]="false"
+  [header]="cocktail()?.strDrink"
+  [modal]="true"
+  [resizable]="true"
+  class="cocktail-dialog">
+  <app-cocktail-item *appLoader="!cocktail()" [cocktail]="cocktail()!"/>
+</p-dialog>

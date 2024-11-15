@@ -1,0 +1,28 @@
+@if (cocktail(); as cocktail) {
+  <div class="cocktail-item__header header">
+    <img [ngSrc]="cocktail.strDrinkThumb"
+         alt="Card"
+         class="header__image"
+         fill
+         priority/>
+    <h2>{{ cocktail.strCategory }}</h2>
+    <h3>{{ cocktail.strGlass }}</h3>
+  </div>
+  <div class="cocktail-item__content"
+       [class.cocktail-item__content_center]="isOverlayPanel()">
+    <app-panel-content panelTitle="Instructions">
+      <p>{{ cocktail.strInstructions }}</p>
+    </app-panel-content>
+
+    @if (ingredientsTableData(); as tableData) {
+      <app-panel-content
+        class="cocktail-item__ingredients-table"
+        panelTitle="Ingredients">
+        <app-table-container
+          [displayedColumns]="['Ingredient', 'Measure']"
+          [tableData]="tableData"
+          [hasPagination]="isOverlayPanel()"/>
+      </app-panel-content>
+    }
+  </div>
+}

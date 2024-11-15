@@ -1,0 +1,18 @@
+::ng-deep .p-panel-title {
+  margin-left: 0.5em;
+}
+
+.overlay-panel {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+  }
+}
+
+.pin-icon {
+  order: 1;
+  align-items: center;
+}

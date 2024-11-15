@@ -1,0 +1,13 @@
+<div class="cocktails-page">
+  <app-cocktails-page-header
+    (randomSearchBtnClick)="showRandomCocktailDialog()"
+    (searchBtnClick)="onSearchBtnClick($event)"/>
+  <div class="cocktails-page__content">
+    <router-outlet></router-outlet>
+  </div>
+
+  <app-cocktail-dialog
+    [(visible)]="visibleRandomCocktailDialog"
+    [cocktail]="randomCocktail()"/>
+</div>
+

@@ -1,0 +1,1 @@
+import"./chunk-BYXBJQAS.js";import"./chunk-4CLCTAJ7.js";var a=[{path:"",redirectTo:"cocktails",pathMatch:"full"},{path:"",loadComponent:()=>import("./chunk-KNLJBPTX.js").then(t=>t.LayoutComponent),children:[{path:"cocktails",loadChildren:()=>import("./chunk-APZ3PLGX.js").then(t=>t.cocktailsRoutes)}]}];export{a as layoutRoutes};

@@ -1,0 +1,17 @@
+<ng-container *appLoader="cocktailLoading()">
+  @if (cocktail(); as cocktail) {
+    <p-panel class="cocktail-page">
+      <ng-template pTemplate="header">
+        <app-cocktail-page-header
+          [title]="cocktail.strDrink"
+          (previousBtnClick)="navigateBtnClick('previous')"
+          (nextBtnClick)="navigateBtnClick('next')"
+        />
+      </ng-template>
+
+      <ng-template pTemplate="content">
+        <app-cocktail-item [cocktail]="cocktail"/>
+      </ng-template>
+    </p-panel>
+  }
+</ng-container>

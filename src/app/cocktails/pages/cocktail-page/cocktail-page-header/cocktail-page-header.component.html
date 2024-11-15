@@ -1,0 +1,30 @@
+<div class="header">
+  <p-button (click)="onBackBtnClick()"
+            [rounded]="true"
+            [text]="true"
+            icon="pi pi-arrow-circle-left"
+            severity="secondary"
+            size="large"
+  />
+
+  <div class="header__title">
+    <h2 class="header__title-text"> {{ title() }}</h2>
+  </div>
+
+  <div class="header__buttons">
+    <p-button (click)="onPreviousBtnClick()"
+              [rounded]="true"
+              [text]="true"
+              icon="pi pi-arrow-left"
+              severity="secondary"
+              size="large"
+    />
+    <p-button (click)="onNextBtnClick()"
+              [rounded]="true"
+              [text]="true"
+              icon="pi pi-arrow-right"
+              severity="secondary"
+              size="large"
+    />
+  </div>
+</div>

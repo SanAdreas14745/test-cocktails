@@ -1,0 +1,11 @@
+@use 'variables';
+@use 'sass:map';
+
+:host {
+  display: block;
+}
+
+.main {
+  max-width: map.get(variables.$display-widths, l);
+  margin: 0 auto;
+}

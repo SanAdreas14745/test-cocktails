@@ -1,0 +1,10 @@
+<div class="search-input">
+  <p-iconField iconPosition="left" style="position: relative">
+    <p-inputIcon styleClass="pi pi-search"/>
+    <input [(ngModel)]="value" pInputText placeholder="Search" type="text"/>
+  </p-iconField>
+
+  @if (hasSearchBtn()) {
+    <p-button (onClick)="searchBtnClick.emit(value())" icon="pi pi-search"/>
+  }
+</div>

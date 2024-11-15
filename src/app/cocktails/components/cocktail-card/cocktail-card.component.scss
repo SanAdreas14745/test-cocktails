@@ -1,0 +1,38 @@
+:host {
+  width: 100%;
+  height: 100%;
+}
+
+:host ::ng-deep {
+  .p-card {
+    display: flex;
+    flex-direction: column;
+
+    &-body {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    &-content {
+      padding: 0;
+    }
+  }
+}
+
+.cocktail-card {
+  height: 100%;
+  display: flex;
+  cursor: pointer;
+  text-align: center;
+}
+
+.header {
+  position: relative;
+  padding: 15px;
+
+  &__image {
+    position: relative !important;
+  }
+}

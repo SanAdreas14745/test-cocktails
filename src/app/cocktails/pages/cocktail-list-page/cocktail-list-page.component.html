@@ -1,0 +1,12 @@
+<section *appLoader="cocktailsLoading()" class="cocktail-list-page">
+  @if (cocktails(); as cocktails) {
+    @if (cocktails.length) {
+      @for (cocktail of cocktails; track cocktail.idDrink) {
+        <app-cocktail-card (click)="onCocktailCardClick(cocktail.idDrink)" [cocktail]="cocktail"/>
+      }
+    } @else {
+      <p>Ничего не найдено</p>
+    }
+  }
+</section>
+

@@ -1,0 +1,12 @@
+:host {
+  display: block;
+}
+
+.cocktail-list-page {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 32px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+}

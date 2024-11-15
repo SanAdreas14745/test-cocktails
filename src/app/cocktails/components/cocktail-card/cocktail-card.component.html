@@ -1,0 +1,11 @@
+@if (cocktail(); as cocktail) {
+  <p-card class="cocktail-card"
+          [header]="cocktail.strDrink"
+          [subheader]="cocktail.strGlass">
+    <ng-template pTemplate="header">
+      <div class="cocktail-card__header header">
+        <img alt="Card" class="header__image" [ngSrc]="cocktail.strDrinkThumb" fill priority/>
+      </div>
+    </ng-template>
+  </p-card>
+}

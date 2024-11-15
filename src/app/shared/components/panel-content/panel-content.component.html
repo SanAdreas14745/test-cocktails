@@ -1,0 +1,39 @@
+<ng-template #content>
+  <ng-content/>
+</ng-template>
+
+<ng-template #pinIcon let-mode>
+  <button (click)="onPinIconClick(mode)"
+          class="p-panel-header-icon p-link pin-icon">
+    <span class="pi pi-thumbtack"></span>
+  </button>
+</ng-template>
+
+@switch (viewMode()) {
+  @case (panelViewMode.PANEL) {
+    <p-panel [header]="panelTitle()" [toggleable]="true">
+      <ng-template pTemplate="icons">
+        <ng-container *ngTemplateOutlet="pinIcon; context: { $implicit: panelViewMode.OVERLAY_PANEL }"/>
+      </ng-template>
+      <ng-template pTemplate="content">
+        <ng-container [ngTemplateOutlet]="content"/>
+      </ng-template>
+    </p-panel>
+  }
+  @case (panelViewMode.OVERLAY_PANEL) {
+    <p-button
+      icon="pi pi-arrow-up-right-and-arrow-down-left-from-center"
+      severity="secondary"
+      [text]="true"
+      [label]="panelTitle()"
+      (onClick)="overlayPanel.toggle($event)"/>
+    <p-overlayPanel class="overlay-panel" #overlayPanel [showCloseIcon]="false">
+      <ng-template pTemplate="content">
+        <div class="overlay-panel__content">
+          <ng-container *ngTemplateOutlet="pinIcon; context: { $implicit: panelViewMode.PANEL }"/>
+          <ng-container [ngTemplateOutlet]="content"/>
+        </div>
+      </ng-template>
+    </p-overlayPanel>
+  }
+}
