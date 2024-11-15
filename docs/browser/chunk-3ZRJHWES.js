@@ -1,0 +1,1 @@
+import{N as a,Ra as i}from"./chunk-YAMN4WAQ.js";var r=(e=>(e.PANEL="panel",e.OVERLAY_PANEL="overlay_panel",e))(r||{});var n=class o{viewMode=i("panel");setViewMode(t){this.viewMode.set(t)}static \u0275fac=function(e){return new(e||o)};static \u0275prov=a({token:o,factory:o.\u0275fac})};export{r as a,n as b};
